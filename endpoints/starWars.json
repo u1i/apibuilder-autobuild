@@ -1,0 +1,273 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Star Wars",
+    "description": "A sample API that uses Star Wars defined in swagger-2.0 specification"
+  },
+  "host": "swapi.co",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Returns all available resources",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-get"
+      }
+    },
+    "/people/": {
+      "get": {
+        "description": "Returns all Star Wars heroes",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getPeople"
+      }
+    },
+    "/people/{id}": {
+      "get": {
+        "description": "Returns a Star Wars heroe based on a single ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the heroe to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getPeopleById"
+      }
+    },
+    "/planets/": {
+      "get": {
+        "description": "Returns all Star Wars planets",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getPlanets"
+      }
+    },
+    "/planets/{id}": {
+      "get": {
+        "description": "Returns a Star Wars planet based on a single ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the planet to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getPlanetsById"
+      }
+    },
+    "/films/": {
+      "get": {
+        "description": "Returns all Star Wars films",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getFilms"
+      }
+    },
+    "/films/{id}": {
+      "get": {
+        "description": "Returns a Star Wars film based on a single ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the film to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getFilmsById"
+      }
+    },
+    "/species/": {
+      "get": {
+        "description": "Returns all Star Wars species",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getSpecies"
+      }
+    },
+    "/species/{id}": {
+      "get": {
+        "description": "Returns a Star Wars specie based on a single ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the specie to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getSpeciesById"
+      }
+    },
+    "/vehicles/": {
+      "get": {
+        "description": "Returns all Star Wars vehicles",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getVehicles"
+      }
+    },
+    "/vehicles/{id}": {
+      "get": {
+        "description": "Returns a Star Wars vehicle based on a single ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the vehicle to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getVehiclesById"
+      }
+    },
+    "/starships/": {
+      "get": {
+        "description": "Returns all Star Wars starships",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getStarships"
+      }
+    },
+    "/starships/{id}": {
+      "get": {
+        "description": "Returns a Star Wars starship based on a single ID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the starship to fetch",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "API response"
+          }
+        },
+        "x-flow": "starWars-getStarshipsById"
+      }
+    }
+  }
+}

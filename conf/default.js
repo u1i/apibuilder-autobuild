@@ -17,7 +17,7 @@ module.exports = {
 	// access to your API using the default configuration.
 
 	// API key
-	apikey: 'Q+6ci79DD3ypoqsLwiWs9ordSsFOhoDo',
+	apikey: 'axway',
 
 	// This is the base url the service will be reachable at not including the port
 	baseurl: 'http://localhost',
@@ -68,7 +68,7 @@ module.exports = {
 	// If you wish any path that is not bound to `apiPrefix` to be accessible without
 	// authentication, then you can explicitly add them to `public` paths.
 	accessControl: {
-		apiPrefixSecurity: 'basic', // none | basic | apikey | ldap | plugin
+		apiPrefixSecurity: 'apikey', // none | basic | apikey | ldap | plugin
 		public: []
 	},
 

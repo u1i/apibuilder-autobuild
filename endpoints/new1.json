@@ -1,0 +1,50 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "new1",
+    "version": "1.0.0"
+  },
+  "basePath": "/endpoints",
+  "paths": {
+    "/new1": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "The find all succeeded, and the results are available.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "schema:///model/new1-full"
+              }
+            }
+          },
+          "401": {
+            "description": "This request requires user authentication, as configured by the server."
+          },
+          "404": {
+            "description": "No results were found."
+          },
+          "500": {
+            "description": "Something went wrong during the request; check out the logs on your server."
+          }
+        },
+        "description": "Find all new1",
+        "operationId": "Find All new1",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "new1"
+        ],
+        "x-flow": "new1-findAll"
+      }
+    },
+    "/new1/{id}": {},
+    "/new1/distinct/{field}": {},
+    "/new1/findAndModify": {},
+    "/new1/count": {},
+    "/new1/upsert": {},
+    "/new1/query": {}
+  }
+}

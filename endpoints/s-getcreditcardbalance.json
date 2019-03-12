@@ -1,0 +1,50 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "",
+    "title": "S-GetCreditCardBalance",
+    "description": "Gets the credit card balance for a card"
+  },
+  "paths": {
+    "/balance": {
+      "get": {
+        "operationId": "GET_balance",
+        "summary": "Get Credit Card Balance",
+        "tags": [
+          "Credit Cards"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "tAccountId",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "balance": {
+                  "type": "string"
+                }
+              }
+            },
+            "examples": {
+              "application/json": {
+                "balance": "847284723"
+              }
+            }
+          }
+        },
+        "x-flow": "s-getcreditcardbalance-GET_balance"
+      }
+    }
+  },
+  "definitions": {}
+}

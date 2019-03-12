@@ -1,0 +1,40 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "File Upload API",
+    "version": "1.0.0",
+    "title": "File Upload API",
+    "contact": {
+      "email": "uhitzel@axway.com"
+    }
+  },
+  "paths": {
+    "/upload": {
+      "post": {
+        "summary": "Uploads a file.",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "upfile",
+            "type": "file",
+            "description": "The file to upload."
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "item created"
+          }
+        },
+        "x-flow": "fileUploadApi-postUpload"
+      }
+    }
+  },
+  "host": "172.17.0.1:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ]
+}
